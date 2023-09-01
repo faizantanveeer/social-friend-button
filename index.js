@@ -30,7 +30,6 @@ btn.addEventListener("click", function () {
   }
 });
 
-function cclick() {
   image.addEventListener("dblclick", function () {
     heart.style.transform = "translate(-40%, -130%) scale(1)";
     heart.style.opacity = 0.7;
@@ -43,6 +42,3 @@ function cclick() {
       heart.style.opacity = 0;
     }, 500);
   });
-}
-
-cclick();
