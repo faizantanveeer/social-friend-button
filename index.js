@@ -10,6 +10,17 @@ btn.addEventListener("click", function () {
     statuss.innerHTML = "Friends";
     statuss.style.color = "Green";
     btn.innerHTML = "Remove Friend";
+    heart.style.transform = "translate(-40%, -130%) scale(1)";
+    heart.style.opacity = 0.7;
+
+    setTimeout(function () {
+      heart.style.transform = "translate(-40%, -130%) scale(0)";
+      heart.style.opacity = 0;
+    }, 1000);
+    setTimeout(function () {
+      heart.style.opacity = 0;
+    }, 500);
+
     flag = 1;
   } else {
     statuss.innerHTML = "Stranger";
@@ -19,13 +30,19 @@ btn.addEventListener("click", function () {
   }
 });
 
-var check = 0;
-
+function cclick() {
   image.addEventListener("dblclick", function () {
-      heart.style.transform = "translate(-40%, -130%) scale(1)";
+    heart.style.transform = "translate(-40%, -130%) scale(1)";
+    heart.style.opacity = 0.7;
 
-      setTimeout(function () {
-        heart.style.opacity = 0;
-      }, 2000);
+    setTimeout(function () {
+      heart.style.transform = "translate(-40%, -130%) scale(0)";
+      heart.style.opacity = 0;
+    }, 1000);
+    setTimeout(function () {
+      heart.style.opacity = 0;
+    }, 500);
   });
+}
 
+cclick();
